@@ -50,7 +50,12 @@ def call_api(movie_id):
     :return: array with myapifilms-API Movie values
     """
     # Call additional movieinformation from the myapifilms API
-    imdb_information = urllib.urlopen("http://www.myapifilms.com/imdb?idIMDB=" + movie_id + "&format=JSON&aka=0&business=0&seasons=0&seasonYear=1&technical=1&lang=en-us&actors=S&biography=0&trailer=0&uniqueName=0&filmography=0&bornDied=0&starSign=0&actorActress=1&actorTrivia=0&movieTrivia=0&awards=0&moviePhotos=N&movieVideos=N&similarMovies=0")
+    imdb_information = urllib.urlopen(
+        "http://www.myapifilms.com/imdb?idIMDB=" + movie_id +
+        "&format=JSON&aka=0&business=0&seasons=0&seasonYear=1&technical=1&"
+        "lang=en-us&actors=S&biography=0&trailer=0&uniqueName=0&filmography=0&"
+        "bornDied=0&starSign=0&actorActress=1&actorTrivia=0&movieTrivia=0&"
+        "awards=0&moviePhotos=N&movieVideos=N&similarMovies=0")
     # Load API Response and transform to JSON
     data_imdb = json.loads(imdb_information.read().decode('utf-8'))
 
