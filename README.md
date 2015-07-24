@@ -7,10 +7,15 @@ Additional information from myapifilms.com are saved as json file in movies_data
 
 ## Table of contents
 
+- [How to run](#how-to-run)
 - [What is included](#what-is-included)
 - [Creator](#creator)
 - [Copyright and license](#copyright-and-license)
 
+## How to run
+
+The app can be executed by several ways, the most direct one is by typing "python entertainment_center.py" on system's command line. 
+If you want to extend or change the movies displayed by the app, you can do this by adding new items to the array "movies_list" in file load_data.py. After that, execute "python load_data.py" on system's command line. A new movies_data.json file will be generated. Then execute again "python entertainment_center.py" on system's command line, to update the content at fresh_tomatoes.html.
 
 ## What is included
 
